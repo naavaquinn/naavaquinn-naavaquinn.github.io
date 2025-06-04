@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naava N. Hedwig | AI Engineer & Digital Strategist</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+</head>
+<body>
+  <div class="custom-cursor"></div>
+  <div class="cursor-follower"></div>
+  
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="logo">
+        <a href="#hero">NH</a>
+      </div>
+      
+      <div class="menu-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <a href="https://drive.google.com/file/d/1XYZ123/view" class="btn resume-btn" target="_blank">Resume</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <section id="hero" class="section hero-section">
+      <div class="particles-container" id="particles-js"></div>
+      
+      <div class="container">
+        <div class="hero-content">
+          <h4 class="hero-subtitle">Hey, I'm</h4>
+          <h1 class="hero-title tech-gradient">Naava N. Hedwig</h1>
+          <h2 class="hero-description">I translate complex data into real-world impact</h2>
+          <p class="hero-text">
+            A unique hybrid of AI engineer and digital strategist, I build intelligent systems by day 
+            and craft cultural relevance by night.
+          </p>
+          
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn">Contact Me</a>
+          </div>
+          
+          <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 10L12 15L17 10" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-3d-container">
+        <canvas id="hero-canvas"></canvas>
+      </div>
+    </section>
+    
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-heading">About Me</h2>
+        
+        <div class="about-content">
+          <div class="about-text">
+            <p>
+              I'm a unique hybrid of <span class="tech-gradient">AI engineer and digital strategist</span>, 
+              building intelligent systems by day and crafting cultural relevance by night. My experience spans 
+              natural language processing, public health data science, brand building, and cross-continental 
+              digital campaigns—all rooted in empathy, innovation, and serious results.
+            </p>
+            <p>
+              Currently, I'm leading AI development for ChatSOO, an intelligent assistant designed for France's 
+              national open research platform: <a href="https://recherche.data.gouv.fr" target="_blank" class="text-link">recherche.data.gouv.fr</a>. 
+              I specialize in fine-tuning multilingual LLMs, engineering 
+              Retrieval-Augmented Generation (RAG) pipelines, and building evaluation metrics for chatbot 
+              responsiveness.
+            </p>
+            <p>
+              My diverse background allows me to bridge technical expertise with strategic thinking, 
+              creating solutions that are not only technically sound but also impactful in real-world applications.
+            </p>
+          </div>
+          
+          <div class="about-skills">
+            <div class="skills-3d">
+              <canvas id="skills-canvas"></canvas>
+            </div>
+            
+            <div class="skills-bars">
+              <h3>Core Competencies</h3>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>NLP & Machine Learning</h4>
+                  <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%; background-color: var(--color-secondary);"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Data Analysis & Visualization</h4>
+                  <span>90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%; background-color: var(--color-accent);"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Digital Marketing Strategy</h4>
+                  <span>92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 92%; background-color: var(--color-secondary);"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Python Development</h4>
+                  <span>88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%; background-color: var(--color-accent);"></div>
+                </div>
+              </div>
+              
+              <div class="skill-item">
+                <div class="skill-info">
+                  <h4>Brand Management</h4>
+                  <span>85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%; background-color: var(--color-secondary);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 16V12" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 8H12.01" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="highlight-content">
+                <h4>AI/NLP Engineer</h4>
+                <p>Leading ChatSOO development at University of Strasbourg</p>
+              </div>
+            </div>
+            
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 12H18L15 21L9 3L6 12H2" stroke="#BD34FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="highlight-content">
+                <h4>Public Health Data Scientist</h4>
+                <p>Developed data systems for national health initiatives in Uganda</p>
+              </div>
+            </div>
+            
+            <div class="highlight-item">
+              <div class="highlight-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12H22" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="highlight-content">
+                <h4>Digital Strategist</h4>
+                <p>Managed brand campaigns across East Africa for major clients</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <h2 class="section-heading">Professional Experience</h2>
+        
+        <div class="experience-container">
+          <div class="experience-timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-node active" data-id="chatsoo" style="top: 0%;">
+              <div class="timeline-tooltip">University of Strasbourg</div>
+            </div>
+            <div class="timeline-node" data-id="idrc" style="top: 20%;">
+              <div class="timeline-tooltip">IDRC</div>
+            </div>
+            <div class="timeline-node" data-id="ykee" style="top: 40%;">
+              <div class="timeline-tooltip">Ykee Benda</div>
+            </div>
+            <div class="timeline-node" data-id="ugaboys" style="top: 60%;">
+              <div class="timeline-tooltip">UgaBoys</div>
+            </div>
+            <div class="timeline-node" data-id="mada" style="top: 80%;">
+              <div class="timeline-tooltip">Mada Hotels</div>
+            </div>
+            <div class="timeline-node" data-id="qodex" style="top: 100%;">
+              <div class="timeline-tooltip">Qodex Media</div>
+            </div>
+          </div>
+          
+          <div class="experience-cards">
+            <div class="experience-card active" id="chatsoo">
+              <div class="experience-header">
+                <h3>AI/NLP Engineer</h3>
+                <span class="company">University of Strasbourg</span>
+                <span class="period">Current</span>
+              </div>
+              
+              <div class="experience-details">
+                <p>Leading the AI development for ChatSOO, an intelligent assistant designed for France's national open research platform.</p>
+                <h4>Key Achievements:</h4>
+                <ul>
+                  <li>Fine-tuned multilingual LLMs for semantic search across diverse open datasets</li>
+                  <li>Engineered Retrieval-Augmented Generation (RAG) pipelines to optimize performance</li>
+                  <li>Built evaluation metrics for chatbot responsiveness, factual grounding, and UX</li>
+                  <li>Collaborated on OntoRefine + GraphDB ontology alignment for enhanced query mapping</li>
+                  <li>Used LangChain, Streamlit, FastAPI & Transformers to deploy a smooth, scalable experience</li>
+                </ul>
+                <a href="https://recherche.data.gouv.fr" target="_blank" class="experience-link">View Project <span>→</span></a>
+              </div>
+            </div>
+            
+            <div class="experience-card" id="idrc">
+              <div class="experience-header">
+                <h3>Data Scientist</h3>
+                <span class="company">Infectious Diseases Research Collaboration</span>
+                <span class="period">2022 - 2023</span>
+              </div>
+              
+              <div class="experience-details">
+                <p>Supported national health initiatives through intelligent data systems, including AI pipelines, dashboards, and spatial modeling.</p>
+                <h4>Key Achievements:</h4>
+                <ul>
+                  <li>SEARCH YOUTH (HIV): Developed data collection tools and psychosocial indicators</li>
+                  <li>UMSP/PRISM (Malaria): Conducted spatial and temporal malaria modeling using QGIS and Python</li>
+                  <li>Zero-Dose Vaccine Study (GAVI): Helped map immunization gaps in hard-to-reach districts</li>
+                  <li>Housing Cluster RCT: Coordinated geodata for a trial on housing modification and malaria reduction</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="experience-card" id="ykee">
+              <div class="experience-header">
+                <h3>Digital Strategist</h3>
+                <span class="company">Ykee Benda - Artist & Entrepreneur</span>
+                <span class="period">2020 - 2022</span>
+              </div>
+              
+              <div class="experience-details">
+                <p>Directed full digital strategy across social media platforms and streaming services.</p>
+                <h4>Key Achievements:</h4>
+                <ul>
+                  <li>Created content calendars, managed video production, and timed releases for max impact</li>
+                  <li>Secured deals with brands like Prudential, 22Bet, Coca-Cola Studio</li>
+                  <li>Oversaw streaming revenue and content monetization across all platforms</li>
+                </ul>
+                <a href="https://bigeye.ug/ykee-benda-bags-100m-in-prudential-insurance-deal/" target="_blank" class="experience-link">View Project <span>→</span></a>
+              </div>
+            </div>
+            
+            <div class="experience-card" id="ugaboys">
+              <div class="experience-header">
+                <h3>Brand Manager</h3>
+                <span class="company">UgaBoys - Artist Duo, Mpaka Records</span>
+                <span class="period">2019 - 2020</span>
+              </div>
+              
+              <div class="experience-details">
+                <p>Launched their entire digital identity: social handles, streaming platforms, royalty setup.</p>
+                <h4>Key Achievements:</h4>
+                <ul>
+                  <li>Brokered a sponsorship deal and landed a Grammy-nominated feature with Eddy Kenzo</li>
+                  <li>Managed social media presence and digital marketing campaigns</li>
+                  <li>Coordinated brand partnerships and promotional events</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="experience-card" id="mada">
+              <div class="experience-header">
+                <h3>Head of Digital Marketing</h3>
+                <span class="company">Mada Hotels (Kenya, Uganda, Tanzania)</span>
+                <span class="period">2018 - 2019</span>
+              </div>
+              
+              <div class="experience-details">
+                <p>Ran digital content strategy for 13 properties across East Africa.</p>
+                <h4>Key Achievements:</h4>
+                <ul>
+                  <li>Directed photo/video content for hotel marketing across booking seasons</li>
+                  <li>Managed social media presence and digital advertising campaigns</li>
+                  <li>Developed marketing strategies for different regional markets</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="experience-card" id="qodex">
+              <div class="experience-header">
+                <h3>Digital Accounts Executive</h3>
+                <span class="company">Qodex Media</span>
+                <span class="period">2017 - 2018</span>
+              </div>
+              
+              <div class="experience-details">
+                <p>Managed digital accounts and led influencer and visual strategy.</p>
+                <h4>Key Achievements:</h4>
+                <ul>
+                  <li>Wrote full website copy and created travel storytelling pieces</li>
+                  <li>Coordinated with influencers for marketing campaigns</li>
+                  <li>Developed visual content strategies for various clients</li>
+                </ul>
+                <a href="https://qodexmedia.com/" target="_blank" class="experience-link">View Project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="experience-stats">
+          <div class="stat-item">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Major Projects</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Countries</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Brand Deals</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <h2 class="section-heading">Featured Projects</h2>
+        
+        <div class="projects-3d">
+          <canvas id="projects-canvas"></canvas>
+        </div>
+        
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai">AI & NLP</button>
+          <button class="filter-btn" data-filter="data">Data Science</button>
+          <button class="filter-btn" data-filter="marketing">Marketing</button>
+          <button class="filter-btn" data-filter="research">Research</button>
+        </div>
+        
+        <div class="projects-grid">
+          <div class="project-card" data-categories="ai nlp research">
+            <div class="project-header" style="background-color: #64FFDA;">
+              <h3>ChatSOO - Open Science Chatbot</h3>
+            </div>
+            <div class="project-content">
+              <p>An intelligent assistant designed for France's national open research platform that democratizes access to scientific data using Large Language Models.</p>
+              <div class="project-tech">
+                <span class="tech-tag">LangChain</span>
+                <span class="tech-tag">Transformers</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">GraphDB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://recherche.data.gouv.fr" target="_blank" class="project-link">View Project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-categories="data research health">
+            <div class="project-header" style="background-color: #BD34FE;">
+              <h3>Malaria Spatial Modeling</h3>
+            </div>
+            <div class="project-content">
+              <p>Conducted spatial and temporal malaria modeling using QGIS and Python for the UMSP/PRISM research initiative in Uganda.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">QGIS</span>
+                <span class="tech-tag">Spatial Analysis</span>
+                <span class="tech-tag">Data Visualization</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-categories="marketing strategy">
+            <div class="project-header" style="background-color: #64FFDA;">
+              <h3>Ykee Benda Digital Strategy</h3>
+            </div>
+            <div class="project-content">
+              <p>Directed full digital strategy for artist Ykee Benda, securing major brand deals and optimizing content monetization.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Content Strategy</span>
+                <span class="tech-tag">Social Media</span>
+                <span class="tech-tag">Brand Partnerships</span>
+                <span class="tech-tag">Analytics</span>
+              </div>
+              <div class="project-links">
+                <a href="https://bigeye.ug/ykee-benda-bags-100m-in-prudential-insurance-deal/" target="_blank" class="project-link">View Project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-categories="data research health">
+            <div class="project-header" style="background-color: #BD34FE;">
+              <h3>Zero-Dose Vaccine Study</h3>
+            </div>
+            <div class="project-content">
+              <p>Mapped immunization gaps in hard-to-reach districts for GAVI Alliance, creating data management systems still in use today.</p>
+              <div class="project-tech">
+                <span class="tech-tag">REDCap</span>
+                <span class="tech-tag">R</span>
+                <span class="tech-tag">QGIS</span>
+                <span class="tech-tag">Data Management</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-categories="marketing strategy">
+            <div class="project-header" style="background-color: #64FFDA;">
+              <h3>Qodex Media Digital Accounts</h3>
+            </div>
+            <div class="project-content">
+              <p>Managed digital accounts and led influencer and visual strategy for various clients at Qodex Media.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Digital Marketing</span>
+                <span class="tech-tag">Content Creation</span>
+                <span class="tech-tag">Influencer Strategy</span>
+              </div>
+              <div class="project-links">
+                <a href="https://qodexmedia.com/" target="_blank" class="project-link">View Project <span>→</span></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-categories="marketing strategy">
+            <div class="project-header" style="background-color: #BD34FE;">
+              <h3>AfroCanFit E-commerce</h3>
+            </div>
+            <div class="project-content">
+              <p>Created and managed online shop and social media for wellness & fitness brand, leading product drops and expo pop-ups.</p>
+              <div class="project-tech">
+                <span class="tech-tag">E-commerce</span>
+                <span class="tech-tag">Social Media</span>
+                <span class="tech-tag">Event Management</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <h2 class="section-heading">Skills & Technologies</h2>
+        
+        <div class="skills-3d">
+          <canvas id="skills-bubble-canvas"></canvas>
+        </div>
+        
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="ai">AI & ML</button>
+          <button class="filter-btn" data-filter="nlp">NLP</button>
+          <button class="filter-btn" data-filter="data">Data Science</button>
+          <button class="filter-btn" data-filter="languages">Languages</button>
+        </div>
+        
+        <div class="skills-grid">
+          <!-- Languages & Tools -->
+          <div class="skill-item" data-categories="languages ai">
+            <div class="skill-header">
+              <h4>Python</h4>
+              <span class="skill-level">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%; background-color: #64FFDA;"></div>
+            </div>
+            <div class="skill-categories">
+              <span class="skill-category">languages</span>
+              <span class="skill-category">ai</span>
+            </div>
+          </div>
+          
+          <div class="skill-item" data-categories="frameworks backend">
+            <div class="skill-header">
+              <h4>FastAPI</h4>
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%; background-color: #BD34FE;"></div>
+            </div>
+            <div class="skill-categories">
+              <span class="skill-category">frameworks</span>
+              <span class="skill-category">backend</span>
+            </div>
+          </div>
+          
+          <div class="skill-item" data-categories="ai nlp">
+            <div class="skill-header">
+              <h4>LangChain</h4>
+              <span class="skill-level">92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 92%; background-color: #64FFDA;"></div>
+            </div>
+            <div class="skill-categories">
+              <span class="skill-category">ai</span>
+              <span class="skill-category">nlp</span>
+            </div>
+          </div>
+          
+          <div class="skill-item" data-categories="ai nlp">
+            <div class="skill-header">
+              <h4>Hugging Face</h4>
+              <span class="skill-level">88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 88%; background-color: #BD34FE;"></div>
+            </div>
+            <div class="skill-categories">
+              <span class="skill-category">ai</span>
+              <span class="skill-category">nlp</span>
+            </div>
+          </div>
+          
+          <!-- NLP Skills -->
+          <div class="skill-item" data-categories="ai nlp">
+            <div class="skill-header">
+              <h4>RAG Pipelines</h4>
+              <span class="skill-level">95%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 95%; background-color: #64FFDA;"></div>
+            </div>
+            <div class="skill-categories">
+              <span class="skill-category">ai</span>
+              <span class="skill-category">nlp</span>
+            </div>
+          </div>
+          
+          <div class="skill-item" data-categories="ai nlp">
+            <div class="skill-header">
+              <h4>Entity Linking</h4>
+              <span class="skill-level">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%; background-color: #BD34FE;"></div>
+            </div>
+            <div class="skill-categories">
+              <span class="skill-category">ai</span>
+              <span class="skill-category">nlp</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skills-certifications">
+          <h3>Certifications</h3>
+          <div class="certifications-grid">
+            <div class="certification-item">
+              <div class="certification-icon" style="background-color: #64FFDA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="certification-content">
+                <h4>Digital Marketing</h4>
+                <p>Accenture</p>
+              </div>
+            </div>
+            <div class="certification-item">
+              <div class="certification-icon" style="background-color: #BD34FE;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 22L12 2L21 22L12 17L3 22Z" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="certification-content">
+                <h4>Geospatial Health Analysis</h4>
+                <p>IDRC</p>
+              </div>
+            </div>
+            <div class="certification-item">
+              <div class="certification-icon" style="background-color: #64FFDA;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12H22" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2Z" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="certification-content">
+                <h4>Data Communication</h4>
+                <p>University of Strasbourg</p>
+              </div>
+            </div>
+            <div class="certification-item">
+              <div class="certification-icon" style="background-color: #BD34FE;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="#0A192F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="certification-content">
+                <h4>AI for Science</h4>
+                <p>Coursera</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2 class="section-heading">Contact Me</h2>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-3d">
+              <canvas id="contact-canvas"></canvas>
+            </div>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 6L12 13L2 6" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Email</h4>
+                  <p>naavahedwig98@gmail.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 10C20 16 12 22 12 22C12 22 4 16 4 10C4 7.87827 4.84285 5.84344 6.34315 4.34315C7.84344 2.84285 9.87827 2 12 2C14.1217 2 16.1566 2.84285 17.6569 4.34315C19.1571 5.84344 20 7.87827 20 10Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Location</h4>
+                  <p>Strasbourg, France</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 16.92V19.92C22 20.4704 21.7893 20.9996 21.4142 21.3747C21.0391 21.7498 20.5099 21.9605 19.96 21.96C16.4223 21.6904 13.0262 20.4705 10.1 18.42C7.38734 16.5523 5.19266 14.0677 4 11.12C2.94 8.17 1.72 4.75 2 1.2C2.00052 0.65105 2.21157 0.122848 2.58636 -0.251581C2.96115 -0.62601 3.49008 -0.835558 4.04 -0.83H7.04C8.06 -0.83 8.93 -0.1 9.16 0.88C9.33 1.55 9.55 2.2 9.82 2.82C10.1 3.52 9.91 4.33 9.41 4.83L8.09 6.15C9.19 8.97 11.46 11.24 14.28 12.34L15.6 11.02C16.1 10.52 16.91 10.33 17.61 10.61C18.23 10.88 18.88 11.1 19.55 11.27C20.55 11.5 21.27 12.38 21.27 13.39L22 16.92Z" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="contact-text">
+                  <h4>Phone</h4>
+                  <p>+33 7 58 02 31 42</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-links">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+              
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              
+              <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+            
+            <div class="form-success">
+              <div class="success-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M22 4L12 14.01L9 11.01" stroke="#64FFDA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h3>Message Sent!</h3>
+              <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="current-year">2025</span> Naava N. Hedwig. All rights reserved.</p>
+      <p>Built with Three.js and GSAP</p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
