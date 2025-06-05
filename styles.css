@@ -4,11 +4,11 @@
 */
 
 :root {
-  --color-primary: #0A192F;
-  --color-secondary: #64FFDA;
-  --color-accent: #BD34FE;
-  --color-text: #E6F1FF;
-  --color-text-secondary: #8892B0;
+  --color-primary: #0F1A2A;
+  --color-secondary: #00E5FF;
+  --color-accent: #FF3E9A;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #B8C7E0;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-code: 'Fira Code', monospace;
@@ -126,7 +126,7 @@ button {
   width: 100%;
   padding: 1.5rem 0;
   z-index: 100;
-  background-color: rgba(10, 25, 47, 0.8);
+  background-color: rgba(15, 26, 42, 0.9);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
@@ -209,7 +209,7 @@ button {
 }
 
 .resume-btn:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.1);
 }
 
 .menu-toggle {
@@ -291,6 +291,8 @@ button {
 
 .hero-content {
   max-width: 800px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-subtitle {
@@ -313,13 +315,15 @@ button {
 .hero-description {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   max-width: 600px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons {
@@ -336,7 +340,7 @@ button {
   font-family: var(--font-heading);
   font-weight: 500;
   color: var(--color-secondary);
-  background: transparent;
+  background: rgba(15, 26, 42, 0.7);
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -351,7 +355,7 @@ button {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.1);
   transition: all 0.3s ease;
   z-index: -1;
 }
@@ -361,7 +365,7 @@ button {
 }
 
 .btn:hover {
-  box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 .btn-primary {
@@ -409,7 +413,8 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
+  opacity: 0.4;
 }
 
 .particles-container {
@@ -418,7 +423,8 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
+  opacity: 0.4;
 }
 
 /* About Section */
@@ -426,10 +432,15 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .about-text {
   font-size: 1.1rem;
+  background-color: rgba(15, 26, 42, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .about-text p {
@@ -445,17 +456,21 @@ button {
 .skills-3d {
   height: 300px;
   position: relative;
+  opacity: 0.8;
 }
 
 .skills-bars {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  background-color: rgba(15, 26, 42, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .skills-bars h3 {
   margin-bottom: 1rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .skill-item {
@@ -498,7 +513,7 @@ button {
   align-items: flex-start;
   gap: 1rem;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 26, 42, 0.8);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
@@ -510,7 +525,7 @@ button {
 
 .highlight-icon {
   padding: 0.75rem;
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -533,6 +548,7 @@ button {
   gap: 2rem;
   margin-bottom: 3rem;
   position: relative;
+  z-index: 2;
 }
 
 .experience-timeline {
@@ -548,7 +564,7 @@ button {
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background-color: rgba(100, 255, 218, 0.3);
+  background-color: rgba(0, 229, 255, 0.3);
 }
 
 .timeline-node {
@@ -558,7 +574,7 @@ button {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: rgba(100, 255, 218, 0.3);
+  background-color: rgba(0, 229, 255, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -596,7 +612,7 @@ button {
 }
 
 .experience-card {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 26, 42, 0.8);
   border-radius: 8px;
   padding: 1.5rem;
   cursor: pointer;
@@ -605,7 +621,7 @@ button {
 }
 
 .experience-card:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(15, 26, 42, 0.9);
 }
 
 .experience-card.active {
@@ -642,7 +658,7 @@ button {
 
 .experience-details h4 {
   margin-bottom: 0.5rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .experience-details ul {
@@ -681,18 +697,20 @@ button {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .stat-item {
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 26, 42, 0.8);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .stat-item:hover {
   transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(15, 26, 42, 0.9);
 }
 
 .stat-number {
@@ -704,7 +722,7 @@ button {
 }
 
 .stat-label {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   font-size: 0.9rem;
 }
 
@@ -712,6 +730,7 @@ button {
 .projects-3d {
   height: 300px;
   margin-bottom: 3rem;
+  opacity: 0.8;
 }
 
 .projects-filter {
@@ -720,11 +739,13 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .filter-btn {
   padding: 0.5rem 1.5rem;
-  background-color: transparent;
+  background-color: rgba(15, 26, 42, 0.8);
   border: 1px solid var(--color-secondary);
   border-radius: 4px;
   color: var(--color-text);
@@ -734,7 +755,7 @@ button {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.1);
   color: var(--color-secondary);
 }
 
@@ -742,10 +763,12 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 26, 42, 0.8);
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -790,7 +813,7 @@ button {
 
 .tech-tag {
   padding: 0.25rem 0.75rem;
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.1);
   border-radius: 20px;
   font-size: 0.8rem;
   color: var(--color-secondary);
@@ -831,12 +854,16 @@ button {
   flex-wrap: wrap;
   gap: 1rem;
   margin: 2rem 0;
+  position: relative;
+  z-index: 2;
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .skill-categories {
@@ -856,12 +883,14 @@ button {
 
 .skills-certifications {
   margin-top: 4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .skills-certifications h3 {
   margin-bottom: 2rem;
   text-align: center;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .certifications-grid {
@@ -875,14 +904,14 @@ button {
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(15, 26, 42, 0.8);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .certification-item:hover {
   transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(15, 26, 42, 0.9);
 }
 
 .certification-icon {
@@ -908,11 +937,14 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-3d {
   height: 300px;
   margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
 .contact-details {
@@ -920,6 +952,9 @@ button {
   flex-direction: column;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  background-color: rgba(15, 26, 42, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .contact-item {
@@ -930,7 +965,7 @@ button {
 
 .contact-icon {
   padding: 0.75rem;
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -950,11 +985,22 @@ button {
   display: flex;
   gap: 1.5rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .social-link {
   color: var(--color-text);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.social-link span {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
 }
 
 .social-link:hover {
@@ -962,8 +1008,15 @@ button {
   transform: translateY(-5px);
 }
 
+.social-link:hover span {
+  color: var(--color-secondary);
+}
+
 .contact-form-container {
   position: relative;
+  background-color: rgba(15, 26, 42, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
 }
 
 .contact-form {
@@ -980,7 +1033,7 @@ button {
 
 .form-group label {
   font-size: 0.9rem;
-  color: var(--color-text-secondary);
+  color: var(--color-text);
 }
 
 .form-group input,
@@ -999,7 +1052,7 @@ button {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-secondary);
-  box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.2);
 }
 
 .submit-btn {
@@ -1040,13 +1093,97 @@ button {
   color: var(--color-secondary);
 }
 
+/* GitHub Projects Section */
+.github-projects-section {
+  position: relative;
+  z-index: 2;
+}
+
+.github-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.github-project-card {
+  background-color: rgba(15, 26, 42, 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(0, 229, 255, 0.1);
+}
+
+.github-project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-secondary);
+}
+
+.github-project-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.github-project-header svg {
+  color: var(--color-secondary);
+}
+
+.github-project-header h3 {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.github-project-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.github-project-content p {
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.github-project-skills {
+  margin-bottom: 1.5rem;
+}
+
+.github-project-skills h4 {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.github-project-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-secondary);
+  font-weight: 500;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.github-project-link:hover {
+  gap: 0.75rem;
+}
+
 /* Footer */
 .footer {
   padding: 2rem 0;
   text-align: center;
-  background-color: rgba(10, 25, 47, 0.8);
+  background-color: rgba(15, 26, 42, 0.9);
   color: var(--color-text-secondary);
   font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
 }
 
 .footer p {
@@ -1067,6 +1204,18 @@ button {
 
 .fade-in {
   animation: fadeIn 1s ease forwards;
+}
+
+/* Background Overlay */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(15, 26, 42, 0.7), rgba(15, 26, 42, 0.9));
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Media Queries */
@@ -1176,7 +1325,8 @@ button {
     left: 50%;
   }
   
-  .projects-grid {
+  .projects-grid,
+  .github-projects-grid {
     grid-template-columns: 1fr;
   }
 }
